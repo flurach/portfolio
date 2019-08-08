@@ -1,0 +1,326 @@
+/* RESET BROWSERS AND SET SOME DEFAULTS */
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    text-shadow: 0px 0px 4px white;
+    color: white;
+    transition: .5s;
+}
+*::selection {
+    background: rgb(0, 195, 255);
+}
+html, body {
+    width: 100%;
+    background: #1a1a1a;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+button {
+    margin: 10px;
+    padding: 10px 30px;
+    background: rgba(255, 255, 255, .05);
+    border: 2px solid white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: .3s;
+    text-shadow: none;
+}
+button:hover {
+    background: white;
+    color: black;
+}
+.inline-block {
+    width: 100%;
+    display: inline-block;
+}
+
+/* HEADER */
+header {
+    padding: 70px 0px;
+    width: 100%;
+    background: #1e1e1e;
+}
+header p img {
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    width: 200px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, .25);
+    border: 3px solid white;
+    background: gray;
+    cursor: pointer;
+}
+header h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 33px;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, .2);
+}
+header h4 {
+    text-shadow: none;
+    text-align: center;
+    font-weight: 700;
+    color: gray;
+    font-size: 20px;
+}
+header .links {
+    margin-top: 20px;
+}
+header .links a {
+    font-size: 30px;
+    margin: 10px;
+    display: inline;
+}
+header .links a i {
+    text-shadow: none;
+    transition: .3s;
+}
+header .links a i:hover {
+    text-shadow: 0px 0px 4px white;
+    color: black;
+}
+
+/* AVATAR IMAGE DISPLAY */
+#avatar-img-display {
+    position: fixed;
+    top: 0px;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    transition: .5s;
+}
+#avatar-img-display .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 100%;
+}
+#avatar-img-display .wrapper img {
+    width: 100%;
+}
+#avatar-img-display .wrapper p {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/* NAVIGATION */
+nav {
+    padding: 70px 0px;
+    width: 100%;
+}
+nav .question {
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+nav p button {
+    display: inline;
+}
+
+/* SKILLS */
+#skills {
+    padding: 50px 0px;
+    width: 100%;
+    background-color: #151515;
+}
+#skills .category {
+    padding: 30px;
+}
+#skills .category h3 {
+    padding: 10px 0px;
+    font-size: 22px;
+}
+#skills .category ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+#skills .category ul li {
+    list-style: none;
+    color: gray;
+    text-shadow: none;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 3px;
+}
+#skills .category ul li::before {
+    border-radius: 3px;
+    content: "";
+    display: inline-block;
+    height: 10px;
+    margin-right: .375rem;
+    width: 10px;
+}
+.before-blue li::before    { background: deepskyblue }
+.before-lime li::before    { background: limegreen }
+.before-magenta li::before { background: magenta }
+
+/* PROJECTS */
+#projects {
+    padding: 50px 0px;
+    background: #151515;
+}
+#projects .project {
+    margin-top: 30px;
+    width: 100%;
+}
+#projects .project img {
+    margin: 30px;
+    margin-bottom: 0px;
+    width: calc(100% - 60px);
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(18, 138, 142, 0.4), 0 3px 30px rgba(24, 223, 67, 0.1);
+    cursor: pointer;
+}
+#projects .project h4 {
+    padding: 5px;
+    text-align: center;
+    text-shadow: none;
+    font-weight: 600;
+    font-size: 22px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#projects .project p {
+    padding: 0px 30px;
+    text-align: center;
+}
+
+/* PROJECT IMAGE DISPLAY */
+#project-img-display {
+    position: fixed;
+    top: 0px;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    transition: .5s;
+}
+#project-img-display .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 100%;
+}
+#project-img-display .wrapper img {
+    width: 100%;
+}
+#project-img-display .wrapper p {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/* Mid mobile */
+@media only screen and (min-width: 400px) {
+
+    #skills .category ul li {
+        font-size: 20px;
+    }
+
+}
+
+/* Tablet */
+@media only screen and (min-width: 650px) {
+
+    #skills .category {
+        padding: 30px;
+    }
+    #skills .category ul {
+        grid-template-columns: repeat(7, auto);
+    }
+    #skills .category ul li {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    #avatar-img-display .wrapper {
+        display: inline;
+        text-align: center;
+    }
+    #avatar-img-display .wrapper img {
+        width: unset;
+        height: 80vh;
+    }
+
+    #projects .grid {
+        margin: 0px 5%;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    #project-img-display .wrapper {
+        display: inline;
+        text-align: center;
+    }
+    #project-img-display .wrapper img {
+        width: unset;
+        height: 80vh;
+    }
+
+}
+
+/* Desktop */
+@media only screen and (min-width: 770px) {
+
+    header {
+        padding: 30px 0px;
+    }
+    header p img {
+        width: 20%;
+    }
+    header .table {
+        margin: auto;
+        display: table;
+    }
+    header .table .table-cell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    header p img {
+        width: 50%;
+    }
+
+    nav {
+        display: table;
+        height: 100%;
+    }
+    nav .table-cell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    nav .table-cell p[align] {
+        padding: 0px 30px;
+    }
+
+    #skills .category {
+        padding: 30px 15%;
+    }
+
+    #projects .grid {
+        margin: 0px 10%;
+        grid-template-columns: repeat(3, auto);
+    }
+
+}
+
+/* Hig Desktop */
+@media only screen and (min-width: 1100px) {
+
+    #skills .category {
+        padding: 30px 25%;
+    }
+
+    #projects .grid {
+        margin: 0px 15%;
+    }
+
+}
