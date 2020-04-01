@@ -1,4 +1,10 @@
-// Setup image displayer
+// Set contact links
+document.querySelectorAll('#links li').forEach(li => {
+	li.onclick = () =>
+		window.location.href = li.getAttribute('href')
+})
+
+// Set image displayer
 let img_displayer = document.getElementById('img-displayer');
 let img_displayer_img = img_displayer.getElementsByTagName('img')[0];
 let displayable_images = document.querySelectorAll('img.displayable');

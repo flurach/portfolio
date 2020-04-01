@@ -21,111 +21,113 @@
 	</div>
 
 	<header>
-		<!-- AVATAR -->
-		<p id="avatar-img" align="center">
-			<img class="displayable" src="/images/pp.jpg" alt="Profile Photo">
-		</p>
+		<!-- PROFILE PHOTO -->
+		<img
+			id="profile-photo" class="displayable"
+			src="/images/pp.jpg" alt="Profile Photo"
+		/>
 
 		<!-- TITLE -->
 		<h1>Mustafa Yıldız</h1>
 		<h4>Web Developer</h4>
 
 		<!-- LINKS -->
-		<p class="links" align="center">
-			<a href="https://instagram.com/flurach"><img src="/icons/instagram.svg"/></a>
-			<a href="https://twitter.com/flurach_dev"><img src="/icons/twitter.svg"/></a>
-			<a href="https://www.reddit.com/u/flurach"><img src="/icons/reddit.svg"/></a>
-			<a href="https://gitlab.com/flurach"><img src="/icons/gitlab.svg"/></a>
-			<a href="mailto:flurach.dev@gmail.com"><img src="/icons/envelope.svg"/></a>
-		</p>
+		<ul id="links">
+			<li href="https://instagram.com/flurach">
+				<img src="/icons/instagram.svg"/></li>
+			<li href="https://twitter.com/flurach_dev">
+				<img src="/icons/twitter.svg"/></li>
+			<li href="https://www.reddit.com/u/flurach">
+				<img src="/icons/reddit.svg"/></li>
+			<li href="https://gitlab.com/flurach">
+				<img src="/icons/gitlab.svg"/></li>
+			<li href="mailto:flurach.dev@gmail.com">
+				<img src="/icons/envelope.svg"/></li>
+		</ul>
 	</header>
 
 	<!-- NAVIGATION -->
 	<nav>
-		<p class="question">Hakkımda ne merak ediyorsunuz?</p>
+		<p>Any Questions?</p>
 		<div>
-			<a href="#skills">Yeteneklerim</a>
-			<a href="#projects">Projelerim</a>
-			<a href="#header">İletişim</a>
+			<a href="#skills">My Skills</a>
+			<a href="#projects">My Projects</a>
+			<a href="#header">Contact</a>
 		</div>
 	</nav>
 
 	<!-- SKILLS -->
 	<section id="skills">
+		<h3>My Skills</h3>
 
-	<!-- TITLE -->
-	<h3 style="text-align: center; font-size: 30px;">Yeteneklerim</h3>
+		<div class="category">
+			<h3>Languages</h3>
+			<ul class="before-blue">
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>Javascript</li>
+				<li>PHP</li>
+				<li>SQL</li>
+				<li>Python</li>
+				<li>C++</li>
+				<li>C</li>
+				<li>Rust</li>
+				<li>Go</li>
+				<li>F#</li>
+				<li>Java</li>
+			</ul>
+		</div>
 
-	<div class="category">
-		<h3>Diller</h3>
-		<ul class="before-blue">
-		<li>HTML</li>
-		<li>CSS</li>
-		<li>Javascript</li>
-		<li>PHP</li>
-		<li>SQL</li>
-		<li>Python</li>
-		<li>C++</li>
-		<li>C</li>
-		<li>Rust</li>
-		<li>Go</li>
-		<li>F#</li>
-		<li>Java</li>
-		</ul>
-	</div>
+		<div class="category">
+			<h3>Databases</h3>
+			<ul class="before-lime">
+				<li>MySQL</li>
+				<li>MongoDB</li>
+				<li>Redis</li>
+			</ul>
+		</div>
 
-	<div class="category">
-		<h3>Veritabanları</h3>
-		<ul class="before-lime">
-		<li>MySQL</li>
-		<li>MongoDB</li>
-		<li>Redis</li>
-		</ul>
-	</div>
-
-	<div class="category">
-		<h3>Araçlar</h3>
-		<ul class="before-magenta">
-		<li>Git/Github</li>
-		<li>Django</li>
-		<li>ReactJS</li>
-		<li>React Native</li>
-		<li>AngularJS</li>
-		<li>Ionic</li>
-		<li>VueJS</li>
-		<li>Express</li>
-		<li>NodeJS</li>
-		<li>APIs</li>
-		<li>REST API</li>
-		<li>PWA</li>
-		<li>jQuery</li>
-		<li>p5.js</li>
-		</ul>
-	</div>
+		<div class="category">
+			<h3>Araçlar</h3>
+			<ul class="before-magenta">
+				<li>Git/Github</li>
+				<li>Django</li>
+				<li>ReactJS</li>
+				<li>React Native</li>
+				<li>AngularJS</li>
+				<li>Ionic</li>
+				<li>VueJS</li>
+				<li>Express</li>
+				<li>NodeJS</li>
+				<li>APIs</li>
+				<li>REST API</li>
+				<li>PWA</li>
+				<li>jQuery</li>
+				<li>p5.js</li>
+			</ul>
+		</div>
 
 	</section>
 
 
 	<!-- PROJECTS -->
 	<section id="projects">
+		<h3>My Projects</h3>
 
-	<!-- TITLE -->
-	<h3 style="text-align: center; font-size: 30px;">Projelerim</h3>
+		<!-- PROJECT LIST -->
+		<div class="grid">
+			<div class="project">
+				<img class="displayable" src="/images/pkosan.jpg" alt="Project Image">
+				<h4 href="http://pkosan.com/">Pkosan</h4>
+				<p>Pkosan prefabrik için geliştirdiğim e-katalog sitesi</p>
+			</div>
 
-	<!-- PROJECT LIST -->
-	<div class="grid">
-		<div class="project">
-			<img class="displayable" src="/images/pkosan.jpg" alt="Project Image">
-			<h4 href="http://pkosan.com/">Pkosan</h4>
-			<p>Pkosan prefabrik için geliştirdiğim e-katalog sitesi</p>
+			<div class="project">
+				<img class="displayable" src="/images/kshort.jpg" alt="Project Image">
+				<h4 href="https://github.com/Aloure/kshort/">Kshort</h4>
+				<p>Kendi yaptığım url kısaltıcı</p>
+			</div>
 		</div>
-
-		<div class="project">
-			<img class="displayable" src="/images/kshort.jpg" alt="Project Image">
-			<h4 href="https://github.com/Aloure/kshort/">Kshort</h4>
-			<p>Kendi yaptığım url kısaltıcı</p>
-		</div>
-	</div>
 
 	</section>
 </body>
