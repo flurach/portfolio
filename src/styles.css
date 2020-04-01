@@ -92,8 +92,8 @@ header h4 {
 }
 
 nav {
-	padding: 50px 30px;
-	width: calc(100% - 60px);
+	padding: 50px 10px;
+	width: calc(100% - 20px);
 	text-align: center
 }
 

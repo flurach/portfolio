@@ -10,7 +10,13 @@ lot recently...
 
 ## How to start developing
 
-First, install dependencies
+First, you need to have
+
+- python3
+- npm
+- zip
+
+Second, install dependencies
 ``` sh
 $ sudo npm run setup
 ```
