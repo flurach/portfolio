@@ -1,0 +1,1 @@
+let e=document.getElementById("img-displayer"),t=e.getElementsByTagName("img")[0];document.querySelectorAll("img.displayable").forEach(l=>{l.onclick=()=>{let c=l.getAttribute("src");t.setAttribute("src",c),e.style.left="0px"}}),e.onclick=()=>e.style.left="100%",document.querySelectorAll(".project h4").forEach(e=>e.onclick=()=>window.location.href=e.getAttribute("href"));

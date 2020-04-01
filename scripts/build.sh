@@ -5,7 +5,7 @@ mkdir -p build
 terser --compress --mangle --toplevel src/script.js > build/script.js
 
 # Minift CSS
-cleancss src/style.css -o build/style.css
+cleancss src/styles.css > build/styles.css
 
 # Minify HTML
 html-minifier --collapse-whitespace --remove-comments --remove-optional-tags \
