@@ -1,9 +1,9 @@
 # My Portfolio
 My Portfolio Site v2
 
-> Apparently, this version weight about 300KB whilst the first one is around
+> Apparently, this version weights around 300KB's whilst the first one is around
 3MB... Not even counting jQuery and fontawesome... Web sure has improved quite a
-lot recently...
+lot lately.
 
 <img src="readme.png">
 
@@ -16,7 +16,7 @@ First, you need to have
 - npm
 - zip
 
-Second, install dependencies
+Secondly, install dependencies
 ``` sh
 $ sudo npm run setup
 ```

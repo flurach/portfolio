@@ -92,8 +92,8 @@ header h4 {
 }
 
 nav {
-	padding: 50px 10px;
-	width: calc(100% - 20px);
+	padding: 50px 30px;
+	width: calc(100% - 60px);
 	text-align: center
 }
 
@@ -109,15 +109,20 @@ nav > div {
 }
 
 nav > div a {
-	display: inline-block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	margin: 0 10px;
 	padding: 5px 10px;
 	width: 100px;
+
 	text-decoration: none;
 	font-weight: 400;
+	color: dodgerblue;
+
 	border-radius: 3px;
-	border: 1px solid dodgerblue;
-	color: dodgerblue
+	border: 1px solid dodgerblue
 }
 
 nav div a:hover {
