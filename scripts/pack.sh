@@ -16,6 +16,7 @@ zip -r packet.zip *
 
 # Delete temp
 mv packet.zip ..
+cd ..
 rm -rf temp
 
 # Put it into __build/__
