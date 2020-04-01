@@ -1,0 +1,23 @@
+{
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "My Portfolio Site",
+	"scripts": {
+		"setup": "bash scripts/setup.sh",
+		"dev": "firefox localhost:8080/src && live-server --no-browser",
+		"start": "bash scripts/start.sh",
+		"build": "bash scripts/build.sh",
+		"pack": "bash scripts/pack.sh",
+		"clean": "bash scripts/clean.sh"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://gitlab.com/flurach/portfolio.git"
+	},
+	"keywords": [],
+	"author": "Flurach",
+	"bugs": {
+		"url": "https://gitlab.com/flurach/portfolio/issues"
+	},
+	"homepage": "https://gitlab.com/flurach/portfolio#readme"
+}
