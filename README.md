@@ -1,6 +1,10 @@
 # My Portfolio
 My Portfolio Site v2
 
+> Apparently, this version weight about 300KB whilst the first one is around
+3MB... Not even counting jQuery and fontawesome... Web sure has improved quite a
+lot recently...
+
 <img src="readme.png">
 
 
