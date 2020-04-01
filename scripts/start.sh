@@ -5,6 +5,5 @@ if [ ! -d build ]; then
 fi
 
 # Run
-cd build
 firefox localhost:8000/build
 python3 -m http.server
