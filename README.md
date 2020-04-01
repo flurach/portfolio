@@ -8,9 +8,8 @@ My Portfolio Site v2
 
 First, install dependencies
 ``` sh
-$ npm run setup
+$ sudo npm run setup
 ```
-This will ask for root password. Don't worry, it's just a portfolio site :)
 
 For development, you can use
 ``` sh

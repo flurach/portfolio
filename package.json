@@ -4,7 +4,7 @@
 	"description": "My Portfolio Site",
 	"scripts": {
 		"setup": "bash scripts/setup.sh",
-		"dev": "firefox localhost:8080/src && live-server --no-browser",
+		"dev": "bash scripts/dev.sh",
 		"start": "bash scripts/start.sh",
 		"build": "bash scripts/build.sh",
 		"pack": "bash scripts/pack.sh",

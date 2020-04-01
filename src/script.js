@@ -4,6 +4,20 @@ document.querySelectorAll('#links li').forEach(li => {
 		window.location.href = li.getAttribute('href')
 })
 
+// Set nav a#contact
+let rotateAngle = 0
+document.querySelector('a[href="#header"]').onclick = function() {
+	window.scrollTo(0, 0)
+	const links = document.querySelector('#links')
+
+	rotateAngle += 360;
+	links.style.filter = `rotateZ(${rotateAngle}deg)`
+	setTimeout(
+		() => links.style.transform = `rotateZ(${rotateAngle}deg)`,
+		250
+	)
+}
+
 // Set image displayer
 let img_displayer = document.getElementById('img-displayer');
 let img_displayer_img = img_displayer.getElementsByTagName('img')[0];
