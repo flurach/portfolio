@@ -4,19 +4,23 @@ My Portfolio Site v2
 <img src="readme.png">
 
 
-# How to run
+## How to start developing
 
-First do `npm run setup` to install dependencies.
-Then you can do `npm run dev` to start the development server which serves
-the files within __src/__.
+First, install dependencies
+``` sh
+$ npm run setup
+```
+This will ask for root password. Don't worry, it's just a portfolio site :)
 
-But if you want, you can do `npm run build`. That minifies files, and puts
-them into __build/__. And then you can do `npm run start` to serve those files.
+For development, you can use
+``` sh
+$ npm run dev
+```
+Which starts a live-server session on port 8080
 
-> NOTE: Npm will yell at you if you try to do `npm run start` without doing
-`npm run build` first!
-
-And if you want, you can zip the built files using `npm run pack`. That packs
-all the necessary files into __build/packet.zip__ which you can basically
-extract to your public_html folder on your hosting. And yes, this is the proof
-of my laziness, no comment on that.
+To create a minified and standalone version of the project, do
+``` sh
+$ npm run publish
+```
+Which generates a zip file in the __build/__ directory. You can then later on
+unzip this to your hosting and that's all you need to do.

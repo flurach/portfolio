@@ -8,7 +8,8 @@
 		"start": "bash scripts/start.sh",
 		"build": "bash scripts/build.sh",
 		"pack": "bash scripts/pack.sh",
-		"clean": "bash scripts/clean.sh"
+		"clean": "bash scripts/clean.sh",
+		"publish": "bash scripts/publish.sh"
 	},
 	"repository": {
 		"type": "git",
