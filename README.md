@@ -13,4 +13,6 @@ Firstly, install dependencies with `yarn`. Then, you can do:
 ``` sh
 $ yarn dev
 ```
-Which starts a nodemon session.
+Which starts a `nodemon` session.
+
+Alternatively, you can do `yarn start` to use `node` instead of `nodemon`.
