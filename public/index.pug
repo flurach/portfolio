@@ -1,0 +1,109 @@
+doctype html
+
+head
+	meta(charset='UTF-8')
+	meta(name='viewport' content='width=device-width, initial-scale=1.0')
+	meta(http-equiv='X-UA-Compatible' content='ie=edge')
+	title Mustafa B. Y&imath;ld&imath;z | My Portfolio
+
+	// STYLES
+	link(rel='icon' type='image/jpeg' href='/images/pp.jpg')
+	link(rel='stylesheet' href='styles.css')
+
+	// SCRIPTS
+	script(src='script.js' defer='')
+
+body
+	// IMAGE DISPLAYER
+	#img-displayer
+		img(src='/pp.jpg' alt='Image')
+		p Click/Touch to exit
+
+	header
+		// PROFILE PHOTO
+		img#profile-photo.displayable(src='/images/pp.jpg' alt='Profile Photo')
+
+		// TITLE
+		h1 Mustafa Y&imath;ld&imath;z
+		h4 Full Stack Developer
+
+		// LINKS
+		ul#links
+			li(href='https://instagram.com/flurach')
+				img(src='/icons/instagram.svg')
+			li(href='https://twitter.com/flurach_dev')
+				img(src='/icons/twitter.svg')
+			li(href='https://www.reddit.com/u/flurach')
+				img(src='/icons/reddit.svg')
+			li(href='https://gitlab.com/flurach')
+				img(src='/icons/gitlab.svg')
+			li(href='mailto:flurach.dev@gmail.com')
+				img(src='/icons/envelope.svg')
+
+	// NAVIGATION
+	nav
+		p Any Questions?
+		div
+			a(href='#skills') My Skills
+			a(href='#projects') My Projects
+			a(href='#header') Contact
+
+	// SKILLS
+	section#skills
+		h3 My Skills
+		.category
+			h3 Languages
+			ul.before-blue
+				li HTML
+				li CSS
+				li Javascript
+				li PHP
+				li SQL
+				li Python
+				li C++
+				li C
+				li Rust
+				li Go
+				li F#
+				li Java
+		.category
+			h3 Databases
+			ul.before-lime
+				li MySQL
+				li MongoDB
+				li Redis
+		.category
+			h3 Tools
+			ul.before-magenta
+				li Git/Github
+				li Firebase
+				li ReactJS
+				li React Native
+				li AngularJS
+				li Ionic
+				li VueJS
+				li Laravel
+				li Express
+				li Web Sockets
+				li socket.io
+				li NodeJS
+				li APIs
+				li REST API
+				li PWA
+				li jQuery
+				li p5.js
+
+	// PROJECTS
+	section#projects
+		h3 My Projects
+
+		// PROJECT LIST
+		.grid
+			.project
+				img.displayable(src='/images/pkosan.jpg' alt='Project Image')
+				h4(href='http://pkosan.com/') Pkosan
+				p E-Catalog website Pkosan Prefabrik
+			.project
+				img.displayable(src='/images/kshort.jpg' alt='Project Image')
+				h4(href='https://github.com/Aloure/kshort/') Kshort
+				p My URL shortener

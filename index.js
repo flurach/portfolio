@@ -1,9 +1,18 @@
 const express = require('express')
+const pug_middleware = require('./src/pug-middleware.js')
 const app = express()
 
 
-// static files
+// middlwares
+app.use(pug_middleware)
+
+
+// static fiels
 app.use(express.static('public'))
+
+
+// '/' route
+app.use('/', (req, res) => res.redirect('/index.pug'))
 
 
 // listen
