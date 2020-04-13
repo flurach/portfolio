@@ -10,6 +10,7 @@ app.use(compression())
 // middlewares
 app.use(require('./src/pug-middleware.js'))
 app.use(require('./src/sass-middleware.js'))
+app.use(require('./src/terser-middleware.js'))
 
 
 // static fiels
