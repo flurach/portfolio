@@ -1,10 +1,15 @@
+const compression = require('compression')
 const express = require('express')
-const pug_middleware = require('./src/pug-middleware.js')
 const app = express()
 
 
-// middlwares
-app.use(pug_middleware)
+// plugins
+app.use(compression())
+
+
+// middlewares
+app.use(require('./src/pug-middleware.js'))
+app.use(require('./src/sass-middleware.js'))
 
 
 // static fiels
