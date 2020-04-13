@@ -3,13 +3,8 @@
 	"version": "1.0.0",
 	"description": "My Portfolio Site",
 	"scripts": {
-		"setup": "bash scripts/setup.sh",
-		"dev": "bash scripts/dev.sh",
-		"start": "bash scripts/start.sh",
-		"build": "bash scripts/build.sh",
-		"pack": "bash scripts/pack.sh",
-		"clean": "bash scripts/clean.sh",
-		"publish": "bash scripts/publish.sh"
+		"dev": "nodemon index.js",
+		"start": "node index.js"
 	},
 	"repository": {
 		"type": "git",
@@ -20,5 +15,9 @@
 	"bugs": {
 		"url": "https://gitlab.com/flurach/portfolio/issues"
 	},
-	"homepage": "https://gitlab.com/flurach/portfolio#readme"
+	"homepage": "https://gitlab.com/flurach/portfolio#readme",
+	"dependencies": {
+		"express": "^4.17.1",
+		"nodemon": "^2.0.3"
+	}
 }
