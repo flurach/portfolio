@@ -5,7 +5,7 @@ const app = express()
 
 // plugins
 if (process.env.NODE_ENV == 'production') {
-	app.use(require('compression'))
+	app.use(require('compression')())
 	app.use(require('express-http-to-https').redirectToHTTPS())
 }
 
