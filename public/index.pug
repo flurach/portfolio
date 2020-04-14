@@ -7,22 +7,18 @@ head
 	title Mustafa B. Yıldız | My Portfolio
 
 	//- STYLES
-	link(rel='icon' type='image/jpeg' href='images/pp.webp')
-	link(rel='stylesheet' href='styles.sass')
-
-	//- SCRIPTS
-	script(src='script.js' defer)
+	link(rel='icon' href='images/pp.webp')
+	link(rel='stylesheet' href='styles/global.sass')
 
 body
+	//- HEADER
+	link(rel='stylesheet' href='styles/header.sass')
 	header
-		//- PROFILE PHOTO
-		img#profile-photo.displayable(src='images/pp.webp' alt='Profile Photo')
+		img.displayable(src='images/pp.webp' alt='Profile Photo')
 
-		//- TITLE
 		h1 Mustafa Yıldız
 		h4 Full Stack Developer
 
-		//- LINKS
 		ul#links
 			li(href='https://-instagram.com/flurach')
 				img(src='icons/instagram.svg')
@@ -36,6 +32,7 @@ body
 				img(src='icons/envelope.svg')
 
 	//- NAVIGATION
+	link(rel='stylesheet' href='styles/nav.sass')
 	nav
 		p Any Questions?
 		div
@@ -44,6 +41,7 @@ body
 			a(href='#header') Contact
 
 	//- SKILLS
+	link(rel='stylesheet' href='styles/skills.sass')
 	section#skills
 		h3 My Skills
 		.category
@@ -89,6 +87,7 @@ body
 				li p5.js
 
 	//- PROJECTS
+	link(rel='stylesheet' href='styles/projects.sass')
 	section#projects
 		h3 My Projects
 
@@ -96,9 +95,12 @@ body
 		.grid
 			.project
 				img.displayable(src='images/pkosan.webp' alt='Project Image' loading='lazy')
-				h4(href='http://-pkosan.com/') Pkosan
+				h4(href='https://pkosan.com/') Pkosan
 				p E-Catalog website Pkosan Prefabrik
 			.project
 				img.displayable(src='images/kshort.webp' alt='Project Image' loading='lazy')
-				h4(href='https://-github.com/Aloure/kshort/') Kshort
+				h4(href='https://gitlab.com/flurach/kshort/') Kshort
 				p My URL shortener
+
+	//- SCRIPTS
+	script(src='script.js' defer)

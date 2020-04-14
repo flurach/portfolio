@@ -1,4 +1,5 @@
 const compression = require('compression')
+const pug = require('pug')
 const express = require('express')
 const app = express()
 
@@ -9,6 +10,7 @@ if (process.env.NODE_ENV == 'production')
 
 
 // middlewares
+app.use(require('./src/404-middleware.js'))
 app.use(require('./src/pug-middleware.js'))
 app.use(require('./src/sass-middleware.js'))
 app.use(require('./src/terser-middleware.js'))
@@ -19,7 +21,9 @@ app.use(express.static('public'))
 
 
 // '/' route
-app.use('/', (req, res) => res.redirect('/index.pug'))
+app.get('/', (req, res) =>
+	res.send(pug.renderFile('public/index.pug'))
+)
 
 
 // listen

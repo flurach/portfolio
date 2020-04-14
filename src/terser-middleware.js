@@ -3,7 +3,7 @@ const path = require('path')
 const terser = require('terser')
 
 
-module.exports = (req, res, next) => {
+module.exports = async (req, res, next) => {
 	const file = path.resolve('public') + req.originalUrl
 
 	if (file.endsWith('.js')) {
@@ -25,6 +25,7 @@ module.exports = (req, res, next) => {
 		if (result.warnings)
 			console.warn(result.warnings)
 
+		await res.setHeader('Content-Type', 'application/javascript')
 		return res.send(code)
 	}
 
