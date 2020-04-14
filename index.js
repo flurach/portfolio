@@ -1,12 +1,13 @@
-const compression = require('compression')
 const pug = require('pug')
 const express = require('express')
 const app = express()
 
 
 // plugins
-if (process.env.NODE_ENV == 'production')
-	app.use(compression())
+if (process.env.NODE_ENV == 'production') {
+	app.use(require('compression'))
+	app.use(require('express-http-to-https').redirectToHTTPS())
+}
 
 
 // middlewares
