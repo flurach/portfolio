@@ -1,106 +1,108 @@
 doctype html
 
-head
-	meta(charset='UTF-8')
-	meta(name='viewport' content='width=device-width, initial-scale=1.0')
-	meta(http-equiv='X-UA-Compatible' content='ie=edge')
-	title Mustafa B. Yıldız | My Portfolio
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		meta(name='description' content="Hello. I'm Mustafa a self-taught full stack developer focusing on mainly web development. Also, I like cakes and kittens.")
+		meta(http-equiv='X-UA-Compatible' content='ie=edge')
+		title Mustafa B. Yıldız | My Portfolio
 
-	//- STYLES
-	link(rel='icon' href='images/pp.webp')
-	link(rel='stylesheet' href='styles/global.sass')
+		//- STYLES
+		link(rel='icon' href='images/pp.webp')
+		link(rel='stylesheet' href='styles/global.sass')
 
-body
-	//- HEADER
-	link(rel='stylesheet' href='styles/header.sass')
-	header
-		img.displayable(src='images/pp.webp' alt='Profile Photo')
+	body
+		//- HEADER
+		link(rel='stylesheet' href='styles/header.sass')
+		header
+			img.displayable(src='images/pp.webp' alt='Profile Photo')
 
-		h1 Mustafa Yıldız
-		h4 Full Stack Developer
+			h1 Mustafa Yıldız
+			h4 Full Stack Developer
 
-		ul#links
-			li(href='https://instagram.com/flurach')
-				img(src='icons/instagram.svg')
-			li(href='https://twitter.com/flurach_dev')
-				img(src='icons/twitter.svg')
-			li(href='https://www.reddit.com/u/flurach')
-				img(src='icons/reddit.svg')
-			li(href='https://gitlab.com/flurach')
-				img(src='icons/gitlab.svg')
-			li(href='mailto:flurach.dev@gmail.com')
-				img(src='icons/envelope.svg')
+			ul#links
+				li(href='https://instagram.com/flurach')
+					img(src='icons/instagram.svg')
+				li(href='https://twitter.com/flurach_dev')
+					img(src='icons/twitter.svg')
+				li(href='https://www.reddit.com/u/flurach')
+					img(src='icons/reddit.svg')
+				li(href='https://gitlab.com/flurach')
+					img(src='icons/gitlab.svg')
+				li(href='mailto:flurach.dev@gmail.com')
+					img(src='icons/envelope.svg')
 
-	//- NAVIGATION
-	link(rel='stylesheet' href='styles/nav.sass')
-	nav
-		p Any Questions?
-		div
-			a(href='#skills') My Skills
-			a(href='#projects') My Projects
-			a(href='#header') Contact
+		//- NAVIGATION
+		link(rel='stylesheet' href='styles/nav.sass')
+		nav
+			p Any Questions?
+			div
+				a(href='#skills') My Skills
+				a(href='#projects') My Projects
+				a(href='#header') Contact
 
-	//- SKILLS
-	link(rel='stylesheet' href='styles/skills.sass')
-	section#skills
-		h3 My Skills
-		.category
-			h3 Languages
-			ul.before-blue
-				li HTML
-				li CSS
-				li Javascript
-				li PHP
-				li SQL
-				li Python
-				li C++
-				li C
-				li Rust
-				li Go
-				li F#
-				li Java
-		.category
-			h3 Databases
-			ul.before-lime
-				li MySQL
-				li MongoDB
-				li Redis
-		.category
-			h3 Tools
-			ul.before-magenta
-				li Git/Github
-				li Firebase
-				li ReactJS
-				li React Native
-				li AngularJS
-				li Ionic
-				li VueJS
-				li Laravel
-				li Express
-				li Web Sockets
-				li socket.io
-				li NodeJS
-				li APIs
-				li REST API
-				li PWA
-				li jQuery
-				li p5.js
+		//- SKILLS
+		link(rel='stylesheet' href='styles/skills.sass')
+		section#skills
+			h3 My Skills
+			.category
+				h3 Languages
+				ul.before-blue
+					li HTML
+					li CSS
+					li Javascript
+					li PHP
+					li SQL
+					li Python
+					li C++
+					li C
+					li Rust
+					li Go
+					li F#
+					li Java
+			.category
+				h3 Databases
+				ul.before-lime
+					li MySQL
+					li MongoDB
+					li Redis
+			.category
+				h3 Tools
+				ul.before-magenta
+					li Git/Github
+					li Firebase
+					li ReactJS
+					li React Native
+					li AngularJS
+					li Ionic
+					li VueJS
+					li Laravel
+					li Express
+					li Web Sockets
+					li socket.io
+					li NodeJS
+					li APIs
+					li REST API
+					li PWA
+					li jQuery
+					li p5.js
 
-	//- PROJECTS
-	link(rel='stylesheet' href='styles/projects.sass')
-	section#projects
-		h3 My Projects
+		//- PROJECTS
+		link(rel='stylesheet' href='styles/projects.sass')
+		section#projects
+			h3 My Projects
 
-		//- PROJECT LIST
-		.grid
-			.project
-				img.displayable(src='images/pkosan.webp' alt='Project Image' loading='lazy')
-				h4(href='https://pkosan.com/') Pkosan
-				p E-Catalog website Pkosan Prefabrik
-			.project
-				img.displayable(src='images/kshort.webp' alt='Project Image' loading='lazy')
-				h4(href='https://gitlab.com/flurach/kshort/') Kshort
-				p My URL shortener
+			//- PROJECT LIST
+			.grid
+				.project
+					img.displayable(src='images/pkosan.webp' alt='Project Image' loading='lazy')
+					h4(href='https://pkosan.com/') Pkosan
+					p E-Catalog website Pkosan Prefabrik
+				.project
+					img.displayable(src='images/kshort.webp' alt='Project Image' loading='lazy')
+					h4(href='https://gitlab.com/flurach/kshort/') Kshort
+					p My URL shortener
 
-	//- SCRIPTS
-	script(src='script.js')
+		//- SCRIPTS
+		script(src='script.js')
