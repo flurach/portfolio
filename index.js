@@ -4,7 +4,8 @@ const app = express()
 
 
 // plugins
-app.use(compression())
+if (process.env.NODE_ENV == 'production')
+	app.use(compression())
 
 
 // middlewares
