@@ -16,7 +16,7 @@ head
 body
 	//- IMAGE DISPLAYER
 	#img-displayer
-		img(src='/pp.jpg' alt='Image')
+		img(alt='Image')
 		p Click/Touch to exit
 
 	header
@@ -100,10 +100,10 @@ body
 		//- PROJECT LIST
 		.grid
 			.project
-				img.displayable(src='/images/pkosan.jpg' alt='Project Image')
+				img.displayable(src='/images/pkosan.jpg' alt='Project Image' loading='lazy')
 				h4(href='http://-pkosan.com/') Pkosan
 				p E-Catalog website Pkosan Prefabrik
 			.project
-				img.displayable(src='/images/kshort.jpg' alt='Project Image')
+				img.displayable(src='/images/kshort.jpg' alt='Project Image' loading='lazy')
 				h4(href='https://-github.com/Aloure/kshort/') Kshort
 				p My URL shortener
