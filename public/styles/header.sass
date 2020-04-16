@@ -1,45 +1,48 @@
 header
 	display: flex
 	flex-direction: column
-	place-items: center
-	padding-top: 70px
-	padding-bottom: 30px
-	width: 100%
+	justify-content: center
+	height: 100vh
+	background: url('../images/wallpaper.jpg') no-repeat center/cover
+	background-attachment: fixed
+	text-align: center
 
-	h1
-		text-align: center
-		font-size: 33px
+	p
+		display: inline-block
+		padding: 10px 15px
+		background: white
+		border-radius: 10px
+		font-size: 35px
 
-	h4
-		text-align: center
-		font-weight: 400
-		font-size: 20px
+	p:nth-child(3)
+		border-radius: 0px 0px 10px 10px
+		font-size: 18px
 
-	> img
-		margin-bottom: 40px
-		width: 175px
-		border-radius: 25px
-		box-shadow: 17px 17px 60px -20px rgba(0, 0, 0, 0.75)
+	nav
+		padding-top: 20px
+		display: grid
+		grid-template-columns: repeat(2, auto)
+		justify-content: center
 
-#links
-	margin-top: 30px
-	display: flex
-	list-style: none
+		a
+			color: white
+			margin: 5px
+			padding: 10px 30px
+			background: dodgerblue
+			text-decoration: none
+			transition: background .5s
+			border-radius: 5px
 
-	img
-		margin: 0px 10px
-		display: inline
-		width: 30px
-		opacity: .5
-		cursor: pointer
+		a:hover
+			background: lightblue
 
-		&:hover
-			opacity: 1
-			transform: scale(125%)
+@media only screen and (min-width: 768px)
+	header
+		p
+			font-size: 50px
 
-@media (prefers-color-scheme: dark)
-	header > img
-		box-shadow: none
+		nav
+			grid-template-columns: repeat(4, auto)
 
-	#links img
-		filter: invert(100%)
+			a
+				margin: 10px
