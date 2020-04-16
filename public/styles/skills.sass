@@ -1,69 +1,21 @@
 #skills
-	.category
-		padding: 30px
+	h3
+		padding: 50px
+		text-decoration: none
 
-		h3
-			padding: 10px
-			text-decoration: none
-
-		ul
+	.grid
 			display: grid
-			grid-template-columns: repeat(3, auto)
+			justify-content: space-evenly
+			grid-template-columns: repeat(4, 15%)
 
-		ul li
-			list-style: none
-			color: gray
-			font-size: 15px
-			font-weight: 400
-			padding: 3px
+			img
+				padding: 10px 0px
 
-			&::before
-				border-radius: 3px
-				content: ""
-				display: inline-block
-				height: 10px
-				margin-right: .375rem
-				width: 10px
 
-.before-blue li::before
-	background: #00bfff
-
-.before-lime li::before
-	background: #32cd32
-
-.before-magenta li::before
-	background: #ff00ff
-
-@media only screen and (min-width: 400px)
-	#skills .category ul li
-		font-size: 20px
-
-@media only screen and (min-width: 650px)
-	#skills .category
-		padding: 30px
-
-		ul
-			grid-template-columns: repeat(5, auto)
-
-			li
-				font-size: 16px
-				font-weight: 600
-
-	#projects .grid
-		margin: 0 5%
-		display: grid
-		grid-template-columns: repeat(2, auto)
-
-@media only screen and (min-width: 770px)
-	#skills .category
-		padding: 30px 15%
-
-		ul
-			grid-template-columns: repeat(5, auto)
-
-@media only screen and (min-width: 1100px)
-	#skills .category
-		padding: 30px 25%
-
-		ul
-			grid-template-columns: repeat(6, auto)
+@media only screen and (min-width: 768px)
+	#skills .grid
+		justify-content: center
+		grid-template-columns: repeat(6, 10%)
+	
+		img
+			padding: 20px

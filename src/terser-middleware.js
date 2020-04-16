@@ -13,7 +13,7 @@ module.exports = async (req, res, next) => {
 			warnings: true,
 			compress: {
 				booleans_as_integers: true,
-				drop_console: true,
+				drop_console: ['development', undefined].includes(process.env.NODE_ENV),
 				keep_fargs: false,
 				passes: 2
 			}
