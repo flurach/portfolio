@@ -4,8 +4,8 @@ header
 	justify-content: center
 	height: 100vh
 	background: url('../images/wallpaper.jpg') no-repeat center/cover
-	background-attachment: fixed
 	text-align: center
+	clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%)
 
 	p
 		display: inline-block
@@ -18,31 +18,16 @@ header
 		border-radius: 0px 0px 10px 10px
 		font-size: 18px
 
-	nav
-		padding-top: 20px
-		display: grid
-		grid-template-columns: repeat(2, auto)
-		justify-content: center
+	a
+		padding: 15px 40px
+		background: dodgerblue
+		border-radius: 5px
+		color: white
+		transform: translateY(100px)
 
-		a
-			color: white
-			margin: 5px
-			padding: 10px 30px
-			background: dodgerblue
-			text-decoration: none
-			transition: background .5s
-			border-radius: 5px
-
-		a:hover
-			background: lightblue
+	a:hover
+		background: lightblue
 
 @media only screen and (min-width: 768px)
 	header
-		p
-			font-size: 50px
-
-		nav
-			grid-template-columns: repeat(4, auto)
-
-			a
-				margin: 10px
+		clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%)
