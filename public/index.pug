@@ -10,18 +10,17 @@ html(lang='en')
 
 		//- STYLES
 		link(rel='icon' href='images/pp.webp')
-		link(rel='stylesheet' href='styles/global.sass')
+		if critical_css
+			style !{critical_css}
+		else
+			link(rel='stylesheet' href='styles/critical.sass')
 
 	body
-		//-NAVBAR
-		link(rel='stylesheet' href='styles/nav.sass')
 		nav
 			a(href="#skills") SKILLS
 			a(href="#projects") PROJECTS
 			a(href="https://gitlab.com/flurach/") GITLAB
 
-		//- HEADER
-		link(rel='stylesheet' href='styles/header.sass')
 		header
 			div
 				p Mustafa Yıldız

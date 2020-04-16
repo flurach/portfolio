@@ -1,0 +1,94 @@
+*
+	margin: 0px
+	padding: 0px
+	outline: none
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+	transition: .25s
+
+html, body
+	scroll-behavior: smooth
+	color: #444
+
+section
+	margin: 50px 0px
+	padding-top: 100px
+	padding-bottom: 20px
+
+	> h3
+		text-align: center
+		font-size: 30px
+
+a
+	text-decoration: none
+
+header
+	display: flex
+	flex-direction: column
+	justify-content: center
+	height: 95vh
+	background: url(images/wallpaper.webp) no-repeat center/cover
+	background-attachment: fixed
+	text-align: center
+	clip-path: polygon(0% 0%, 100% 0%, 100% 97%, 50% 100%, 0% 97%)
+
+	p
+		display: inline-block
+		padding: 10px 15px
+		background: white
+		border-radius: 10px
+		font-size: 35px
+
+	p:nth-child(3)
+		border-radius: 0px 0px 10px 10px
+		font-size: 18px
+
+	a
+		padding: 15px 40px
+		background: linear-gradient(to bottom right, lightgreen, limegreen)
+		border-radius: 5px
+		color: white
+		text-shadow: 4px 4px 11px rgba(0, 0, 0, .25)
+		box-shadow: 4px 4px 11px rgba(0, 0, 0, .5)
+
+	a:hover
+		filter: brightness(110%)
+
+@media only screen and (min-width: 768px)
+	header
+		clip-path: polygon(0% 0%, 100% 0%, 100% 97%, 50% 100%, 0% 97%)
+
+@keyframes im_here_nav
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+@keyframes im_here_nav_a
+	0%
+		transform: translateX(-1000%)
+	50%
+		transform: translateX(-1000%)
+	100%
+		transform: translateX(0px)
+		
+	
+nav
+	position: fixed
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 100vw
+	background: rgba(255, 255, 255, .6)
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, .25)
+	z-index: 1001
+	animation: im_here_nav 1.5s 1
+
+	a
+		padding: 20px 15px
+		color: tomato
+		animation: im_here_nav_a 1.5s 1
+		font-weight: bold
+
+	a:hover
+		background: tomato
+		color: white

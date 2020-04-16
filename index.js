@@ -1,6 +1,23 @@
+const fs = require('fs')
+const path = require('path')
 const pug = require('pug')
+const sass = require('dart-sass')
 const express = require('express')
 const app = express()
+
+
+// watch critical.css
+const critical_sass = path.resolve('public/styles/critical.sass')
+const critical_css = path.resolve('public/styles/critical.css')
+
+const compile_critical = () => fs.writeFileSync(critical_css, sass.renderSync({
+	file: critical_sass,
+	outputStyle: 'compressed'
+}).css.toString())
+
+compile_critical()
+if (process.env.NODE_ENV != 'production')
+	fs.watchFile(critical_sass, { interval: 1000 }, compile_critical)
 
 
 // plugins
@@ -23,7 +40,10 @@ app.use(express.static('public'))
 
 // '/' route
 app.get('/', (req, res) =>
-	res.send(pug.renderFile('public/index.pug'))
+	res.send(pug.renderFile(
+		'public/index.pug',
+		{ critical_css: fs.readFileSync(critical_css) }
+	))
 )
 
 
