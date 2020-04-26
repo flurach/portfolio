@@ -1,31 +1,52 @@
 #projects
 	.grid
+		margin-top: 30px
 		display: grid
 		justify-content: center
 
 		.project
-			margin-top: 30px
-			width: 100%
+			display: grid
+			margin: 10px
+			width: calc(100% - 20px)
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2)
+			text-align: center
 
 			img
-				margin: 30px
-				margin-bottom: 0px
-				width: calc(100% - 60px)
-				border-radius: 5px
-				box-shadow: 4px 4px 11px rgba(0, 0, 0, 0.2)
+				width: 100%
 
 			h4
-				padding: 5px
-				text-align: center
+				padding: 5px 0px
 				font-weight: 600
 				font-size: 22px
 				cursor: pointer
 				text-decoration: underline
 
-		p
-			padding: 0 30px
-			text-align: center
-			font-weight: 300
+			p
+				padding: 5px
+				font-weight: 300
+
+			div
+				display: grid
+				grid-template-columns: 50% 50%
+				justify-content: center
+				margin-top: 10px
+
+				a
+					padding: 5px
+					color: white
+
+				a:hover
+					filter: brightness(120%)
+
+				a.source
+					background: dodgerblue
+
+				a.demo
+					background: tomato
+
+		.project:hover
+			transform: scale(1.005)
+			box-shadow: 4px 4px 11px rgba(0, 0, 0, 0.4)
 
 @media only screen and (min-width: 768px)
 	#projects .grid

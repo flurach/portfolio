@@ -1,6 +1,6 @@
 # My Portfolio
 My Portfolio Site v3
-<img src="readme.png">
+<img src="public/images/readme.webp">
 
 
 ## How to start developing
