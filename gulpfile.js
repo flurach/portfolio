@@ -1,8 +1,7 @@
-const { src, dest, watch, parallel, series } = require('gulp')
+const { src, dest, watch, parallel } = require('gulp')
 const gulpPug = require('gulp-pug')
 const gulpSass = require('gulp-sass')
 const gulpTerser = require('gulp-terser')
-const gls = require('gulp-live-server')
 const sync = require('browser-sync').create()
 const gulpWait = require('gulp-wait')
 
@@ -47,15 +46,6 @@ async function terser(done) {
 }
 
 
-
-// server
-async function server(done) {
-	gls.static(['./dist', './public'], process.env.PORT || 3000).start()
-	done()
-}
-
-
-
 // watch
 exports.watch = () => {
 	sync.init({ server: ['./dist', './public'] })
@@ -68,8 +58,5 @@ exports.watch = () => {
 }
 
 
-// scripts
-exports.pug = pug
-exports.sass = sass
-exports.terser = terser
-exports.start = series(parallel(pug, sass, terser), server)
+// compile
+exports.compile = parallel(pug, sass, terser)
