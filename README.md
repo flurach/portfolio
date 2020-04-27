@@ -11,8 +11,8 @@ All you need is
 
 Firstly, install dependencies with `yarn`. Then, you can do:
 ``` sh
-$ yarn dev
+$ yarn watch
 ```
-Which starts a `nodemon` session.
+Which starts a live-updating server.
 
-Alternatively, you can do `yarn start` to use `node` instead of `nodemon`.
+Alternatively, you can do `yarn start` to serve compiled output.

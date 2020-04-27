@@ -10,10 +10,8 @@ html(lang='en')
 
 		//- STYLES
 		link(rel='icon' href='images/pp.webp')
-		if critical_css
-			style !{critical_css}
-		else
-			link(rel='stylesheet' href='styles/critical.sass')
+		style
+			include ../dist/styles/critical.css
 
 	body
 		//- GO BACK TO TOP
@@ -32,7 +30,7 @@ html(lang='en')
 				a(href='mailto:flurach.dev@gmail.com') CONTACT ME
 
 		//- SKILLS
-		link(rel='stylesheet' href='styles/skills.sass')
+		link(rel='stylesheet' href='styles/skills.css')
 		section#skills
 			h3 My Skills
 			.grid
@@ -50,7 +48,7 @@ html(lang='en')
 				img(src='icons/javascript.svg' alt='Javascript')
 
 		//- PROJECTS
-		link(rel='stylesheet' href='styles/projects.sass')
+		link(rel='stylesheet' href='styles/projects.css')
 		section#projects
 			h3 My Projects
 			.grid
@@ -76,7 +74,7 @@ html(lang='en')
 						a(href='https://github.com/flurach/portfolio').source Source
 						a(href='https://flurach.herokuapp.com').demo Demo
 		//- ABOUT ME
-		link(rel='stylesheet' href='styles/about.sass')
+		link(rel='stylesheet' href='styles/about.css')
 		section#about
 			img(src='images/pp.jpg' alt='Profile Picture')
 			h3 About Me
@@ -90,7 +88,7 @@ html(lang='en')
 			a(href='mailto:flurach.dev@gmail.com') CONTACT ME
 
 		//- SOCIAL MEDIA LINKS
-		link(rel='stylesheet' href='styles/social.sass')
+		link(rel='stylesheet' href='styles/social.css')
 		section#social
 			footer
 				img(src='social-icons/instagram.svg' alt='instagram')

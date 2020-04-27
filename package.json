@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"description": "My Portfolio Site",
 	"scripts": {
-		"dev": "nodemon index.js",
-		"start": "node index.js"
+		"watch": "gulp watch",
+		"start": "gulp start"
 	},
 	"repository": {
 		"type": "git",
@@ -17,12 +17,11 @@
 	},
 	"homepage": "https://gitlab.com/flurach/portfolio#readme",
 	"dependencies": {
-		"compression": "^1.7.4",
-		"dart-sass": "^1.25.0",
-		"express": "^4.17.1",
-		"express-http-to-https": "^1.1.4",
-		"nodemon": "^2.0.3",
-		"pug": "^2.0.4",
-		"terser": "^4.6.11"
+		"browser-sync": "^2.26.7",
+		"gulp": "^4.0.2",
+		"gulp-live-server": "^0.0.31",
+		"gulp-pug": "^4.0.1",
+		"gulp-sass": "^4.1.0",
+		"gulp-terser": "^1.2.0"
 	}
 }
