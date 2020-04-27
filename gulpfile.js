@@ -65,4 +65,4 @@ exports.watch = cb => {
 
 
 // start script
-exports.start = series(parallel(pug, sass, terser), server)
+exports.start = series(sass, parallel(pug, terser), server)
