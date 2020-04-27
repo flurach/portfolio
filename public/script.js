@@ -1,5 +1,19 @@
 const nav = document.querySelector('nav')
 
+const set_go_top = () => {
+	const go_top = document.getElementById('go-top')
+
+	window.addEventListener('scroll', () => {
+		if (window.pageYOffset > 200)
+			go_top.style.right = '20px'
+		else
+			go_top.style.right = '-100%'
+	})
+
+	go_top.onclick = () =>
+		window.scrollTo(0, 0)
+}
+
 const set_nav = () => window.addEventListener('scroll', () => {
 	if (window.pageYOffset > 50 && nav.classList.contains('bg') == false)
 		nav.classList.add('bg')
@@ -35,7 +49,15 @@ const set_tooltips = () => document.querySelectorAll('#skills img').forEach(img 
 	}
 })
 
+const set_social_links = () => document.querySelectorAll('footer img').forEach(link => {
+	if (link.hasAttribute('href'))
+		link.onclick = () =>
+			window.location.href = link.getAttribute('href')
+})
+
 window.onload = () => {
+	set_go_top()
 	set_nav()
 	set_tooltips()
+	set_social_links()
 }

@@ -16,21 +16,25 @@ html(lang='en')
 			link(rel='stylesheet' href='styles/critical.sass')
 
 	body
+		//- GO BACK TO TOP
+		img#go-top(src='icons/up-arrow.svg')
+
 		nav
-			a(href="#skills") SKILLS
-			a(href="#projects") PROJECTS
-			a(href="https://github.com/flurach/") GITHUB
+			a(href='#skills') SKILLS
+			a(href='#projects') PROJECTS
+			a(href='#about') ABOUT ME
+			a(href='https://github.com/flurach/') GITHUB
 
 		header
 			div
 				h1 Mustafa B. Yıldız
 				h3 Full Stack Developer
-				a(href="mailto:flurach.dev@gmail.com") CONTACT ME
+				a(href='mailto:flurach.dev@gmail.com') CONTACT ME
 
 		//- SKILLS
 		link(rel='stylesheet' href='styles/skills.sass')
 		section#skills
-			h3 I know
+			h3 My Skills
 			.grid
 				img(src='icons/react.svg' alt='React')
 				img(src='icons/vue-dot-js.svg' alt='Vue.js')
@@ -48,7 +52,7 @@ html(lang='en')
 		//- PROJECTS
 		link(rel='stylesheet' href='styles/projects.sass')
 		section#projects
-			h3 And I have made...
+			h3 My Projects
 			.grid
 				.project
 					img(src='images/kshort.webp' alt='Project Image' loading='lazy')
@@ -71,5 +75,27 @@ html(lang='en')
 					div
 						a(href='https://github.com/flurach/portfolio').source Source
 						a(href='https://flurach.herokuapp.com').demo Demo
+		//- ABOUT ME
+		link(rel='stylesheet' href='styles/about.sass')
+		section#about
+			img(src='images/pp.jpg' alt='Profile Picture')
+			h3 About Me
+			p
+				| My name is Mustafa.
+				br
+				| I live in Turkey/Ankara and I have been coding
+				| since my childhood.
+				| I like learning new stuff and tinkering with
+				| technology. I'm self-taught.
+			a(href='mailto:flurach.dev@gmail.com') CONTACT ME
+
+		//- SOCIAL MEDIA LINKS
+		link(rel='stylesheet' href='styles/social.sass')
+		section#social
+			footer
+				img(src='social-icons/instagram.svg' alt='instagram')
+				img(src='social-icons/twitter.svg' alt='twitter')
+				img(src='social-icons/reddit.svg' alt='reddit')
+
 		//- SCRIPTS
 		script(src='script.js')
