@@ -46,7 +46,7 @@ function terser(cb) {
 
 // server
 function server(cb) {
-	gls.static('./dist', process.env.PORT || 3000).start()
+	gls.static(['./dist', './public'], process.env.PORT || 3000).start()
 	cb()
 }
 
@@ -64,5 +64,8 @@ exports.watch = cb => {
 }
 
 
-// start script
-exports.start = series(sass, parallel(pug, terser), server)
+// scripts
+exports.pug = pug
+exports.sass = sass
+exports.terser = terser
+exports.start = series(parallel(pug, terser), server)

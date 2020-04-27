@@ -4,7 +4,7 @@
 	"description": "My Portfolio Site",
 	"scripts": {
 		"watch": "gulp watch",
-		"start": "gulp start"
+		"start": "gulp sass && gulp start"
 	},
 	"repository": {
 		"type": "git",
