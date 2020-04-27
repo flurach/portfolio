@@ -4,29 +4,33 @@ const gulpSass = require('gulp-sass')
 const gulpTerser = require('gulp-terser')
 const gls = require('gulp-live-server')
 const sync = require('browser-sync').create()
+const gulpWait = require('gulp-wait')
 
 
 // pug
-function pug(cb) {
+async function pug(done) {
 	src('./public/**/*.pug')
+		.pipe(gulpWait(1000))
 		.pipe(gulpPug())
 		.pipe(dest('./dist'))
-	cb()
+	done()
 }
 
 
 // sass
-function sass(cb) {
+async function sass(done) {
 	src('./public/**/*.sass')
-		.pipe(gulpSass({ outputStyle: 'compressed' }).on('error', gulpSass.logError))
+		.pipe(gulpSass({
+			outputStyle: 'compressed',
+		}).on('error', gulpSass.logError))
 		.pipe(dest('./dist'))
 		.pipe(sync.stream())
-	cb()
+	done()
 }
 
 
 // terser
-function terser(cb) {
+async function terser(done) {
 	src('./public/**/*.js')
 		.pipe(gulpTerser({
 			toplevel: true,
@@ -39,21 +43,21 @@ function terser(cb) {
 			}
 		}))
 		.pipe(dest('./dist'))
-	cb()
+	done()
 }
 
 
 
 // server
-function server(cb) {
+async function server(done) {
 	gls.static(['./dist', './public'], process.env.PORT || 3000).start()
-	cb()
+	done()
 }
 
 
 
 // watch
-exports.watch = cb => {
+exports.watch = () => {
 	sync.init({ server: ['./dist', './public'] })
 
 	watch('./public/**/*.pug', { ignoreInitial: false }, pug)
@@ -68,4 +72,4 @@ exports.watch = cb => {
 exports.pug = pug
 exports.sass = sass
 exports.terser = terser
-exports.start = series(parallel(pug, terser), server)
+exports.start = series(parallel(pug, sass, terser), server)

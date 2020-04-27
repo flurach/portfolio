@@ -4,7 +4,7 @@
 	"description": "My Portfolio Site",
 	"scripts": {
 		"watch": "gulp watch",
-		"start": "gulp sass && gulp start"
+		"start": "gulp start"
 	},
 	"repository": {
 		"type": "git",
@@ -22,6 +22,7 @@
 		"gulp-live-server": "^0.0.31",
 		"gulp-pug": "^4.0.1",
 		"gulp-sass": "^4.1.0",
-		"gulp-terser": "^1.2.0"
+		"gulp-terser": "^1.2.0",
+		"gulp-wait": "^0.0.2"
 	}
 }
