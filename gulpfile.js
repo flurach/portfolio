@@ -53,6 +53,7 @@ exports.watch = () => {
 	watch('./public/**/*.pug', { ignoreInitial: false }, pug)
 		.on('change', sync.reload)
 	watch('./public/**/*.sass', { ignoreInitial: false }, sass)
+		.on('change', sync.reload)
 	watch('./public/**/*.js', { ignoreInitial: false}, terser)
 		.on('change', sync.reload)
 }

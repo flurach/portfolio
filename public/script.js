@@ -1,5 +1,3 @@
-const nav = document.querySelector('nav')
-
 const set_go_top = () => {
 	const go_top = document.getElementById('go-top')
 
@@ -15,6 +13,8 @@ const set_go_top = () => {
 }
 
 const set_nav = () => window.addEventListener('scroll', () => {
+	const nav = document.querySelector('nav')
+
 	if (window.pageYOffset > 50 && nav.classList.contains('bg') == false)
 		nav.classList.add('bg')
 	else if (window.pageYOffset < 50 && nav.classList.contains('bg'))
@@ -56,8 +56,8 @@ const set_social_links = () => document.querySelectorAll('footer img').forEach(l
 })
 
 window.onload = () => {
-	set_go_top()
 	set_nav()
+	set_go_top()
 	set_tooltips()
 	set_social_links()
 }

@@ -16,9 +16,6 @@
 		"url": "https://gitlab.com/flurach/portfolio/issues"
 	},
 	"homepage": "https://gitlab.com/flurach/portfolio#readme",
-	"engines": {
-		"node": "v14.0.0"
-	},
 	"dependencies": {
 		"browser-sync": "^2.26.7",
 		"express": "^4.17.1",
